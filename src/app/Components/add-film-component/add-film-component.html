@@ -1,0 +1,38 @@
+<div class="cinema-wrapper">
+    <div class="cinema-card">
+        <div class="cinema-header">
+            <div class="cinema-icon">🎥</div>
+            <h2>Add New Film</h2>
+            <p>Заповніть дані про новий фільм</p>
+        </div>
+
+        <form>
+            <div>
+                <label for="Title">Title</label>
+                <input type="text" name="Title" [(ngModel)]="filmToAdd.Title" placeholder="Title" required>
+            </div>
+            <div>
+                <label for="Description">Description</label>
+                <input type="text" name="Description" [(ngModel)]="filmToAdd.Description" placeholder="Description"
+                    required>
+            </div>
+            <div>
+                <label for="PosterUrl">Poster url</label>
+                <input type="text" name="PosterUrl" [(ngModel)]="filmToAdd.PosterUrl" placeholder="Poster url" required>
+            </div>
+            <div>
+                <label for="PublicationYear">Publication year</label>
+                <input type="number" name="PublicationYear" [(ngModel)]="filmToAdd.PublicationYear"
+                    placeholder="Publication year" required>
+            </div>
+            <div>
+                <label for="LengthInMinuts">Length in minutes</label>
+                <input type="number" name="LengthInMinuts" [(ngModel)]="filmToAdd.LengthInMinuts"
+                    placeholder="Length in minutes" required>
+            </div>
+
+            <button type="button" (click)="addFilm(); backToHome()">Add</button>
+            <button type="button" (click)="backToHome()">Back to home page</button>
+        </form>
+    </div>
+</div>

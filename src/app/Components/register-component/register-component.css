@@ -1,0 +1,169 @@
+:host {
+    display: block;
+}
+
+/* Фонова зона кінотеатру на весь екран */
+.cinema-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1b112c 0%, #08050e 70%, #000000 100%);
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+    /* Додає прокрутку, якщо форма довга на невеликих екранах */
+}
+
+/* Картка реєстрації у кінотеатральному стилі */
+.cinema-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    /* Трохи ширше, оскільки полів більше */
+    background: rgba(18, 14, 28, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(229, 9, 20, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    margin: auto;
+}
+
+/* Ефект світла від проєктора зверху */
+.cinema-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(ellipse at top, rgba(229, 9, 20, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Заголовок та іконка */
+.cinema-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cinema-icon {
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.6));
+}
+
+.cinema-header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.cinema-header p {
+    color: #a097b2;
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+/* Відступи між полями форми */
+form div {
+    margin-bottom: 15px;
+}
+
+/* Стилі для всіх інпутів (текстових, парольних та числових) */
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background: rgba(8, 5, 14, 0.7);
+    border: 1px solid #332448;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input::placeholder {
+    color: #6b6080;
+}
+
+form input:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+    background: rgba(12, 8, 20, 0.9);
+}
+
+/* Основна кнопка "Register" */
+form button[type="button"]:first-of-type {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+form button[type="button"]:first-of-type:hover {
+    background: linear-gradient(135deg, #f40612 0%, #c40712 100%);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+    transform: translateY(-2px);
+}
+
+form button[type="button"]:first-of-type:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
+}
+
+/* Друга кнопка "To login" (контурна/другорядна кнопка) */
+form button[type="button"]:last-of-type {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid rgba(229, 9, 20, 0.5);
+    border-radius: 8px;
+    color: #ff4d4d;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button[type="button"]:last-of-type:hover {
+    background: rgba(229, 9, 20, 0.15);
+    border-color: #e50914;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+form button[type="button"]:last-of-type:active {
+    transform: translateY(0);
+}

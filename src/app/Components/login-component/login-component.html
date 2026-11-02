@@ -1,0 +1,21 @@
+<div class="cinema-wrapper">
+    <div class="cinema-card">
+        <div class="cinema-header">
+            <div class="projector-light"></div>
+            <div class="cinema-icon">🎬</div>
+            <h2>Cinema Login</h2>
+            <p>Enter login and password to enter cinema</p>
+        </div>
+        <form>
+            <div>
+                <input type="text" name="Login" [(ngModel)]="userForLogin.Login" placeholder="Login" required>
+            </div>
+            <div>
+                <input type="password" name="Password" [(ngModel)]="userForLogin.Password" placeholder="Password"
+                    required>
+            </div>
+            <button type="button" (click)="login()">Login</button>
+            <button type="button" (click)="moveToRegistration()">To registration</button>
+        </form>
+    </div>
+</div>

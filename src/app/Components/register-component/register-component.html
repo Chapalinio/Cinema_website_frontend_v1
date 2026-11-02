@@ -1,0 +1,36 @@
+<div class="cinema-wrapper">
+    <div class="cinema-card">
+        <div class="cinema-header">
+            <div class="cinema-icon">🎟️</div>
+            <h2>Cinema Register</h2>
+            <p>Create account to enter cinema</p>
+        </div>
+
+        <form>
+            <div>
+                <input type="text" name="Login" [(ngModel)]="userForRegistration.Login" placeholder="Login" required>
+            </div>
+            <div>
+                <input type="password" name="Password" [(ngModel)]="userForRegistration.Password" placeholder="Password"
+                    required>
+            </div>
+            <div>
+                <input type="password" name="ComfirmPassword" [(ngModel)]="comfirmPassword"
+                    placeholder="Confirm Password" required>
+            </div>
+            <div>
+                <input type="text" name="Name" [(ngModel)]="userForRegistration.Name" placeholder="Your name" required>
+            </div>
+            <div>
+                <input type="text" name="Surname" [(ngModel)]="userForRegistration.Surname" placeholder="Your surname"
+                    required>
+            </div>
+            <div>
+                <input type="number" name="Age" [(ngModel)]="userForRegistration.Age" placeholder="42" required>
+            </div>
+
+            <button type="button" (click)="register()">Register</button>
+            <button type="button" (click)="moveToLogin()">To login</button>
+        </form>
+    </div>
+</div>

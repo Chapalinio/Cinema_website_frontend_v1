@@ -1,0 +1,37 @@
+<pre>{{allFilms | json}}</pre>
+<div class="cinema-home-wrapper">
+    <header class="home-header">
+        <div class="logo-area">
+            <span class="cinema-icon">🎬</span>
+            <h1>Cinema Catalog</h1>
+        </div>
+        <button class="btn-add" (click)="addFilm()">
+            + Add Film
+        </button>
+    </header>
+
+    <main class="films-grid-container">
+        @for (film of allFilms(); track $index) {
+        <div class="film-card">
+
+            <div class="film-poster">
+                <img [src]="film.posterUrl" [alt]="film.title" class="film-img">
+            </div>
+
+            <div class="film-info">
+                <div class="info-line title-line">
+                    <span>{{ film.title }}</span>
+                </div>
+                <div class="info-line details-line">
+                    <span>{{ film.publicationYear }} р. • {{ film.lengthInMinuts }} хв.</span>
+                </div>
+            </div>
+
+            <button class="btn-remove" (click)="removeFilm(film.id)">
+                Remove <span class="cross-icon">✕</span>
+            </button>
+
+        </div>
+        }
+    </main>
+</div>

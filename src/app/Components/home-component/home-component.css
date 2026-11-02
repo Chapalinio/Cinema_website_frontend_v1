@@ -1,0 +1,182 @@
+:host {
+    display: block;
+    width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1b112c 0%, #08050e 70%, #000000 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.cinema-home-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+    padding-bottom: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cinema-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.6));
+}
+
+.home-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+.btn-add:hover {
+    background: linear-gradient(135deg, #f40612 0%, #c40712 100%);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+    transform: translateY(-2px);
+}
+
+.films-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.film-card {
+    background: rgba(18, 14, 28, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(229, 9, 20, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.9),
+        0 0 25px rgba(229, 9, 20, 0.3);
+    border-color: rgba(229, 9, 20, 0.6);
+}
+
+.film-poster {
+    width: 100%;
+    height: 360px;
+    /* Вертикальний кінопостер */
+    background: rgba(8, 5, 14, 0.7);
+    border: 1px solid #332448;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.film-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.film-card:hover .film-img {
+    transform: scale(1.03);
+}
+
+/* Інформаційні блоки (чистий текст без рамок інпутів) */
+.film-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 4px;
+}
+
+.info-line {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title-line span {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.details-line span {
+    font-size: 0.9rem;
+    color: #a09cb0;
+}
+
+/* Кнопка видалення */
+.btn-remove {
+    background: transparent;
+    border: 1px solid rgba(229, 9, 20, 0.4);
+    border-radius: 6px;
+    color: #ff4d4d;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-remove:hover {
+    background: rgba(229, 9, 20, 0.15);
+    border-color: #e50914;
+    color: #ff1a1a;
+}
+
+.cross-icon {
+    font-size: 1rem;
+    font-weight: bold;
+}

@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* Додайте це на самий початок глобального файлу styles.css / styles.scss */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #08050e;
+    /* Щоб під час завантаження не було білого спалаху */
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
